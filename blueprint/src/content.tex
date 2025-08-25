@@ -5,3 +5,55 @@
 % If you want to split the blueprint content into several files then
 % the current file can be a simple sequence of \input. Otherwise It
 % can start with a \section or \chapter for instance.
+
+
+\section{The Gauss-Lucas Theorem}
+
+\begin{lemma}[Logarithmic Derivative of a Complex Polynomial]
+  \label{lem:logDeriv_Polynomial}
+  \lean{logDeriv_Polynomial}
+  \leanok
+  The logarithmic derivative of a complex polynomial
+  is the sum of the inverses of its factors.
+\end{lemma}
+  
+\begin{proof}
+  TODO
+\end{proof}
+
+\begin{lemma}[Sum of inverses of polynomial factors on a root]
+  \label{lem:sum_inv_sub_roots_eq_zero}
+  \lean{sum_inv_sub_roots_eq_zero}
+  \leanok
+  If z is a root of the derivative of a polynomial p, but not a root of p itself, then the sum of the inverses of the differences between x and each root of p is zero.
+\end{lemma}
+  
+\begin{proof}
+  \uses{lem:logDeriv_Polynomial}
+  TODO
+\end{proof}
+
+\begin{lemma}[The derivative root is a weighted average of roots]
+  \label{lem:deriv_root_as_weighted_average_of_roots}
+  \lean{deriv_root_as_weighted_average_of_roots}
+  \leanok
+  If z is a root of the derivative of a polynomial p, but not a root of p itself,
+  then it can be expressed as a weighted average of the roots of p.
+\end{lemma}
+  
+\begin{proof}
+  \uses{lem:sum_inv_sub_roots_eq_zero}
+  TODO
+\end{proof}
+
+\begin{theorem}[Gauss-Lucas]
+  \label{thm:gauss_lucas}
+  \lean{gauss_lucas}
+  \leanok
+  If P is a polynomial with complex coefficients, all roots of P' belong to the convex hull of the set of zeros of P.
+\end{theorem}
+  
+\begin{proof}
+  \uses{lem:deriv_root_as_weighted_average_of_roots}
+  TODO
+\end{proof}
